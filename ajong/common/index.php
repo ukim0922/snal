@@ -13,18 +13,18 @@ $_SESSION['$current_page'] = 1;
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
 <body>
 <div id="wrapper">
-<?php include "menu.php"; ?>
+<?php include "../common/menu.php"; ?>
 
 	<div id="page" class="container">
-		<div><a href="#" class="image image-full"><img src="badminton.jpg" alt="" /></a></div>
+		<div><a href="#" class="image image-full"><img src="../images/badminton.jpg" alt="" /></a></div>
 			<div class="title">
 				<h2><strong>SNAL</strong> : Yonsei University Badminton Club</h2>
 				<span class="byline">쉽게 접할 수 있고, 남녀노소 즐길 수 있는 배드민턴! 연세대학교 동아리 스날 웹페이지에 오신것을 환영합니다.</span>
