@@ -76,8 +76,10 @@ $number = $total_record - $start;
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
+<body>
 <div id="wrapper">
 		<?php include "menu.php"; ?>
+		
 		<div id="portfolio-wrapper">
 		<div id="page" class="container">
 				<div class="title">

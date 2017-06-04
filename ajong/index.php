@@ -19,9 +19,10 @@ $_SESSION['$current_page'] = 1;
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
+<body>
 <div id="wrapper">
 <?php include "menu.php"; ?>
-<body>
+
 	<div id="page" class="container">
 		<div><a href="#" class="image image-full"><img src="badminton.jpg" alt="" /></a></div>
 			<div class="title">
