@@ -70,15 +70,15 @@ $number = $total_record - $start;
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
 <body>
 <div id="wrapper">
-		<?php include "menu.php"; ?>
+		<?php include "../common/menu.php"; ?>
 		
 		<div id="portfolio-wrapper">
 		<div id="page" class="container">
@@ -94,7 +94,7 @@ $number = $total_record - $start;
 		                    <option value='content'>내용</option>
 						</select></ul.style2>
 					<ul.style2 id="list_search4"><input type="text" name="search"></ul.style2>
-					<ul.style2 id="list_search5"><input type="image" src="./images/search.png"></ul.style2>
+					<ul.style2 id="list_search5"><input type="image" src="../images/search.png"></ul.style2>
 					
 				</div>
 				</form>

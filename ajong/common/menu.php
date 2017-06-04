@@ -1,7 +1,7 @@
 	<div id="header-wrapper">
 		<div id="header" class="container">
 			<div id="top_login">
-			<?php include "top_login.php"; ?>
+			<?php include "../common/top_login.php"; ?>
 			</div>
 			<div id="logo">
 				<h1><a href="#">SNAL</a></h1>
@@ -21,7 +21,7 @@
 				case 1:
 					?>
 					<li class="current_page_item"><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li><a href="community.php" accesskey="4" title="">Community</a></li>
@@ -30,7 +30,7 @@
 				case 2:
 					?>
 					<li><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li class="current_page_item"><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li class="current_page_item"><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li><a href="community.php" accesskey="4" title="">Community</a></li>
@@ -39,7 +39,7 @@
 				case 3:
 					?>
 					<li class="current_page_item"><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li class="current_page_item"><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li><a href="community.php" accesskey="4" title="">Community</a></li>
@@ -48,7 +48,7 @@
 				case 4:
 					?>
 					<li><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li class="current_page_item"><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li><a href="community.php" accesskey="4" title="">Community</a></li>
@@ -57,7 +57,7 @@
 				case 5:
 					?>
 					<li><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li class="current_page_item"><a href="community.php" accesskey="4" title="">Community</a></li>
@@ -69,7 +69,7 @@
 			}else {
 			?>
 					<li><a href="index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
 					<li><a href="community.php" accesskey="4" title="">Community</a></li>
