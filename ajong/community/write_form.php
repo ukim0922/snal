@@ -10,6 +10,7 @@ if(isset($_GET['num'])){
 }else{
 	$num = "";
 }
+
 if ($mode=="modify")
 {
 	$sql = "select * from $table where num=$num";
@@ -67,18 +68,18 @@ if(isset($_GET['page'])) {
 	{
 
 ?>
-		<form  name="board_form" method="post" action="../notice/insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="../community/insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
 <?php
 	}
 	else
 	{
 ?>
-		<form  name="board_form" method="post" action="../notice/insert.php?table=<?=$table?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="../community/insert.php?table=<?=$table?>&id=<?=isset($_SESSION['$current_page'])?>" enctype="multipart/form-data"> 
 <?php
 	}
 ?>						
 			<div class="title">
-					<h2><strong>NOTICE 작성 페이지</strong></h2> 
+					<h2><strong>Community 작성 페이지</strong></h2> 
 				</div>
 			<div class="write_line"></div>
 			<div id="write_row1"><div class="col1"> 제목   </div>
@@ -92,7 +93,7 @@ if(isset($_GET['page'])) {
 			<div class="clear"></div>
 		</div>
 		<div id="write_button"><a type="submit" href="#" onclick="check_input()" class="button">ok</a>&nbsp;
-								<a href="../notice/notice.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a></div>
+								<a href="../community/community.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a></div>
 		</form>
 	</div> <!-- end of col2 -->
   </div> <!-- end of content -->
