@@ -21,7 +21,7 @@ if($pdo){
 //mysql_close();
 echo "
 <script>
-location.href = '../notice/notice.php?table=$table';
+location.href = '../community/community.php?table=$table';
 </script>
 ";
 ?>

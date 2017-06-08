@@ -64,12 +64,18 @@ a img {
 	
 	#view_title1 {
 		float:left;
-		width:70%;
+		width:60%;
 	}
 	
 	#view_title2 {
 		float:left;
-		width:28%;
+		width:20%;
+		text-align:right;
+	}
+	
+	#view_title3 {
+		float:left;
+		width:20%;
 		text-align:right;
 	}
 	
@@ -671,4 +677,10 @@ table.type09 td {
     padding: 10px;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
+}
+
+.list_item2{
+	float:left;
+	width:50%;
+	align: center;
 }

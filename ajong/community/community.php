@@ -5,7 +5,7 @@ if(isset($_SESSION['$current_page']))
 	unset($_SESSION['$current_page']);
 }
 $_SESSION['$current_page'] = 2;
-$table = "notice";
+$table = "community";
 
 $scale = 10;
 $pdo = new PDO('mysql:host=localhost;dbname=sampledb;charset=utf8', 'root', '243146');
@@ -83,9 +83,9 @@ $number = $total_record - $start;
 		<div id="portfolio-wrapper">
 		<div id="page" class="container">
 				<div class="title">
-					<h2><strong>NOTICE</strong></h2> 
+					<h2><strong>Community</strong></h2> 
 				</div>
-				<form  name="board_form" method="post" action="../notice/notice.php?table=<?=$table?>&mode=search"> 
+				<form  name="board_form" method="post" action="../community/community.php?table=<?=$table?>&mode=search"> 
 				<div id="list_search">
 					<div id="list_search1" class="byline"> 총 <?= $total_record ?> 개의 게시물이 있습니다.</div>
 					<ul.style2 id="list_search3">
@@ -102,11 +102,12 @@ $number = $total_record - $start;
 		
 				<div id="list_top_title">
 					
-					<table class="type09">
+					<table class="type09" style="vertical-align:center; " >
 					    <thead>
 					    <tr>
       					  <th scope="cols">글번호</th>
  					      <th scope="cols">제목</th>
+ 					      <th scope="cols">작성자</th>
  					      <th scope="cols">등록일</th>
  						</tr>
 					    </thead>
@@ -117,6 +118,7 @@ $number = $total_record - $start;
 				$row= $result_array[$i];
 				//$result->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_ABS, $i);
 				$item_num     = $row['num'];
+				$item_id     = $row['id'];
 		      	$item_date    = $row['regist_day'];
 			  	$item_date = substr($item_date, 0, 10);  
 			  	$item_title= str_replace(" ", "&nbsp;", $row['title']);
@@ -124,9 +126,10 @@ $number = $total_record - $start;
 			
    						<tbody>
    							<tr>
-   								<th scope="row" id="list_item1"><?=$number?></th>
-        						<td id="list_item2"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
-        						<td id="list_item4"><?= $item_date ?></td>
+   								<th style="width:10%;" align="center" scope="row"><?=$number?></th>
+        						<td style="width:50%;" align="center"><a href="../community/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
+   								<td style="width:20%;" align="center"><?= $item_id ?></td>
+        						<td style="width:20%;" align="center"><?= $item_date ?></td>
 					        </tr>
 					    </tbody>
 		<?php $number--; } ?>
@@ -143,21 +146,20 @@ $number = $total_record - $start;
 				}
 				else
 				{ 
-					echo "<a href='notice.php?table=$table&page=$i'> $i </a>";
+					echo "<a href='../community/community.php?table=$table&page=$i'> $i </a>";
 				}      
 		   }
 		?>			
 					&nbsp;&nbsp;&nbsp;&nbsp;다음 ▶
 						</div>
 						<div id="button">
-							<a href="../notice/notice.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
+							<a href="../community/community.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
 		<?php
 		if(isset($_SESSION['user_session'])){
-			if($_SESSION['user_session']=="admin"){
 		?>
-				<a href="../notice/write_form.php?table=<?=$table?>&mode=0" class="button">글쓰기</a>
+				<a href="../community/write_form.php?table=<?=$table?>&mode=0" class="button">글쓰기</a>
 		<?php
-			}}
+			}
 		?>
 						</div>
 					</div> <!-- end of page_button -->		

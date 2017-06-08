@@ -10,6 +10,7 @@ $row = $result->fetch();
 // 하나의 레코드 가져오기
 
 $item_num     = $row['num'];
+$item_id     = $row['id'];
 $item_date    = $row['regist_day'];
 $item_title = str_replace(" ", "&nbsp;", $row['title']);
 $item_content = $row['content'];
@@ -44,13 +45,14 @@ $pdo->query($sql);
 	<div id="portfolio-wrapper">
 		<div id="page" class="container">
         <div class="title">
-					<h2><strong>NOTICE</strong></h2> 
+					<h2><strong>Community</strong></h2> 
 		</div>		
 		<div id="view_comment"> &nbsp;</div>
 
 		<div id="view_title">
 			<div id="view_title1"><strong><?= $item_title ?></strong></div>
-			<div id="view_title2">등록일 : <?= $item_date ?></div>	
+			<div id="view_title2">작성자 : <?= $item_id ?></div>	
+			<div id="view_title3">등록일 : <?= $item_date ?></div>	
 		</div>
 
 		<div id="view_content">
@@ -58,7 +60,7 @@ $pdo->query($sql);
 		</div>
 
 		<div id="view_button">
-				<a href="../notice/notice.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
+				<a href="../community/community.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
 <?php
 if(isset($_SESSION['user_session'])){
 	$userid = $_SESSION['user_session'];
@@ -68,8 +70,8 @@ if(isset($_SESSION['user_session'])){
 	if($userid=="admin")// || $userlevel==1 )
 	{
 ?>
-				<a href="../notice/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
-				<a href="javascript:del('../notice/delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
+				<a href="../community/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
+				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
 <?php
 	}
 ?>
