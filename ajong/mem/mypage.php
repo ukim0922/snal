@@ -3,7 +3,7 @@ session_start();
 
 if(!isset($_SESSION['user_session'])){
 	echo "<script>alert(\"로그인 해주세요!\");
-	window.location.href='login.php';
+	window.location.href='../mem/login.php';
 	</script>";
 }
 
@@ -15,8 +15,8 @@ if(!isset($_SESSION['user_session'])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Coding Cage : Sign up</title>
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="style.css" type="text/css"  />
 </head>
 <body>

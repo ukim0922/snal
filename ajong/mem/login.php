@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once("class.user.php");
+require_once("../mem/class.user.php");
 $login = new USER();
 
 if(isset($_SESSION['user_session']))
 {
-	header("Location: index.php");
+	header("Location: ../common/index.php");
 }
 
 if(isset($_POST['btn-login']))
@@ -15,7 +15,7 @@ if(isset($_POST['btn-login']))
 	
 	if($login->login($uid,$upass))
 	{
-		$login->redirect('index.php');
+		$login->redirect('../common/index.php');
 	}
 	else
 	{
@@ -29,8 +29,8 @@ if(isset($_POST['btn-login']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login : cleartuts</title>
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"  />
-<link rel="stylesheet" href="style.css" type="text/css"  />
+<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"  />
+<link rel="stylesheet" href="../css/style.css" type="text/css"  />
 </head>
 <body>
 <div class="container">
