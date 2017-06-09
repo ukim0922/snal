@@ -23,7 +23,7 @@
 					<li class="current_page_item"><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 					break;
@@ -32,7 +32,7 @@
 					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li class="current_page_item"><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 					break;
@@ -41,7 +41,7 @@
 					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li class="current_page_item"><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 					break;
@@ -50,7 +50,7 @@
 					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li class="current_page_item"><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li class="current_page_item"><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 					break;
@@ -59,19 +59,25 @@
 					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li class="current_page_item"><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 					break;
 				default:
-					
+					?>
+					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<?php
 			}
 			}else {
 			?>
 					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
 					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="https://space.yonsei.ac.kr/index.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
 					<?php
 			}
