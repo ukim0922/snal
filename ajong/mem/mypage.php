@@ -1,6 +1,12 @@
 <?php 
 session_start();
 
+if(isset($_SESSION['$current_page']))
+{
+	unset($_SESSION['$current_page']);
+}
+$_SESSION['$current_page'] = 0;
+
 if(!isset($_SESSION['user_session'])){
 	echo "<script>alert(\"로그인 해주세요!\");
 	window.location.href='../mem/login.php';
@@ -85,6 +91,8 @@ if(!isset($_SESSION['user_session'])){
 </div>
 
 </div>
-
+<div id="footer">
+	<p>강원도 원주시 연세대길1 학관 4층</p>
+</div>
 </body>
 </html>

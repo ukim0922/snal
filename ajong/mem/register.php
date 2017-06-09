@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+if(isset($_SESSION['$current_page']))
+{
+	unset($_SESSION['$current_page']);
+}
+$_SESSION['$current_page'] = 0;
+
 require_once('class.user.php');
 $user = new USER();
 
@@ -235,17 +242,18 @@ if(isset($_POST['btn-signup']))
 					</div>
 				</div>
 			</div>
-            
-            
-    
             <div class="clearfix"></div>
             <div class="form-group">
-            	<button type="submit" class="btn btn-primary" name="btn-signup">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-6">
+            	<button type="submit" class="button" name="btn-signup">
                 	<i class="glyphicon glyphicon-open-file"></i>가입
                 </button>
+                </div>
             </div>
-            <br />
-            <label>이미 가입되어 있다면 <a href="login.php">로그인</a></label>
+           
+            <label >이미 가입되어 있다면? <a href="login.php"> 로그인</a></label>
         </form>
        </div>
 </div>
@@ -253,7 +261,7 @@ if(isset($_POST['btn-signup']))
 </div>
 
 <div id="footer">
-	<p>강원도 원주시 연세대길1 학관 313호</p>
+	<p>강원도 원주시 연세대길1 학관 4층</p>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

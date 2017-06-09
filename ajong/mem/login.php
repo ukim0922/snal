@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(isset($_SESSION['$current_page']))
+{
+	unset($_SESSION['$current_page']);
+}
+$_SESSION['$current_page'] = 0;
+
 require_once("../mem/class.user.php");
 $login = new USER();
 
@@ -24,19 +30,34 @@ if(isset($_POST['btn-login']))
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login : cleartuts</title>
-<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"  />
-<link rel="stylesheet" href="../css/style.css" type="text/css"  />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SNAL</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../fonts/fonts.css" rel="stylesheet" type="text/css" media="all" />
+	
+
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
 </head>
 <body>
-<div class="container">
-     <div class="form-container">
+<div id="wrapper">
+<?php include "../common/menu.php"; ?>
+
+<div id="portfolio-wrapper">
+<div id="page" class="container">
+            <div class="title">
+					<h2><strong>LOGIN</strong></h2> 
+			</div>
         <form method="post">
-            <h2>로그인</h2><hr />
             <?php
             if(isset($error))
             {
@@ -55,7 +76,7 @@ if(isset($_POST['btn-login']))
             </div>
             <div class="clearfix"></div><hr />
             <div class="form-group">
-             <button type="submit" name="btn-login" class="btn btn-block btn-primary">
+             <button type="submit" name="btn-login" class="button">
                  <i class="glyphicon glyphicon-log-in"></i>&nbsp;로그인
                 </button>
             </div>
@@ -64,6 +85,8 @@ if(isset($_POST['btn-login']))
         </form>
        </div>
 </div>
-
+<div id="footer">
+	<p>강원도 원주시 연세대길1 학관 4층</p>
+</div>
 </body>
 </html>
