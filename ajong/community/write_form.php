@@ -74,7 +74,7 @@ if(isset($_GET['page'])) {
 	else
 	{
 ?>
-		<form  name="board_form" method="post" action="../community/insert.php?table=<?=$table?>&id=<?=isset($_SESSION['$current_page'])?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="../community/insert.php?table=<?=$table?>" enctype="multipart/form-data"> 
 <?php
 	}
 ?>						
