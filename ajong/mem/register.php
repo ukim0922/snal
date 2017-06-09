@@ -142,7 +142,7 @@ if(isset($_POST['btn-signup']))
 			{
 				 ?>
                  <div class="alert alert-info">
-                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; Successfully registered <a href='login.php'>login</a> here
+                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; 회원가입이 완료되었습니다! <a href='../mem/login.php'>로그인</a> 
                  </div>
                  <?php
 			}

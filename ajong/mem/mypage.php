@@ -45,29 +45,19 @@ if(isset($_POST['btn-modify']))
 	else if($upass !== $upasscheck){
 		$error[] = "비밀번호가 일치하지 않습니다!";
 	}
-	else if($uname=="")	{
-		$error[] = "이름을 입력해주세요!";
-	}
-	else if($uposi=="")	{
-		$error[] = "정보를 선택해주세요!";
-	}
 	else if($uphone=="")	{
 		$error[] = "휴대폰 번호를 입력해주세요!";
 	}
-	
 	else if(strlen($upass) < 8){
 		$error[] = "비밀번호를 8자리 이상 문자로 입력해 주세요";
 	}
 	else if(!checkdate($mm, $dd, $yyyy)){
 		$error[] = "생년월일을 확인해 주세요";
 	}
-	
-	
 	else
 	{
 		try
-		{
-			
+		{		
 			$stmt = $user->runQuery("SELECT id, phone_number FROM personal_info WHERE id=:uid OR phone_number=:uphone");
 			$stmt->execute(array(':uid'=>$uid, ':uphone'=>$uphone));
 			$row=$stmt->fetch(PDO::FETCH_ASSOC);
@@ -91,9 +81,7 @@ if(isset($_POST['btn-modify']))
 		}
 	}
 }
-
 ?>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -251,8 +239,6 @@ if(isset($_POST['btn-modify']))
                 </button>
                 </div>
             </div>
-           
-            <label >이미 가입되어 있다면? <a href="login.php"> 로그인</a></label>
         </form>
        </div>
 </div>
