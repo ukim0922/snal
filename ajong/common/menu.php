@@ -4,7 +4,7 @@
 			<?php include "../common/top_login.php"; ?>
 			</div>
 			<div id="logo">
-				<h1><a href="#">SNAL</a></h1>
+				<h1><a href="../common/index.php">SNAL</a></h1>
 				<p>연세대학교 배드민턴 중앙동아리</p>
 			</div>
 					<div id="social">
@@ -25,6 +25,7 @@
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 					break;
 				case 2:
@@ -34,6 +35,7 @@
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 					break;
 				case 3:
@@ -43,6 +45,7 @@
 					<li class="current_page_item"><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 					break;
 				case 4:
@@ -52,6 +55,7 @@
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li class="current_page_item"><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 					break;
 				case 5:
@@ -61,6 +65,17 @@
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li class="current_page_item"><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<?php
+					break;
+				case 6:
+					?>
+					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
+					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
+					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
+					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
+					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li class="current_page_item"><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 					break;
 				default:
@@ -79,6 +94,7 @@
 					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
 					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
 					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
 					<?php
 			}
 			?>

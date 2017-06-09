@@ -261,7 +261,7 @@ if(isset($_POST['btn-signup']))
 </div>
 
 <div id="footer">
-	<p>강원도 원주시 연세대길1 학관 313호</p>
+	<p>강원도 원주시 연세대길1 학관 4층</p>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

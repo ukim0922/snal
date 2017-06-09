@@ -24,7 +24,7 @@ $_SESSION['$current_page'] = 1;
 <?php include "../common/menu.php"; ?>
 
 	<div id="page" class="container">
-		<div><a href="#" class="image image-full"><img src="../images/badminton.jpg" alt="" /></a></div>
+		<div><a href="#" class="image image-full"><img src="../images/snal2.png" alt=""></img></a></div>
 			<div class="title">
 				<h2><strong>SNAL</strong> : Yonsei University Badminton Club</h2>
 				<span class="byline">쉽게 접할 수 있고, 남녀노소 즐길 수 있는 배드민턴! 연세대학교 동아리 스날 웹페이지에 오신것을 환영합니다.</span>
@@ -35,17 +35,17 @@ $_SESSION['$current_page'] = 1;
 			<div class="title">
 				<h2>CONTACT US</h2>
 				<span class="byline">welcome to badminton world</span> 
+			<img src="../images/snal_logo.jpg" alt="" ></img>
 			</div>
 				<div class="box">
-					<span class="icon icon-phone"></span>
 					<h3>가입 문의</h3>
-					<p> 회장	서명인 (010-8620-1491)</p>
+					<p> 회장 : 서명인 (010-8620-1491)</p>
 				</div>
 	</div>
 	</div>
 </div>
 <div id="footer">
-	<p>강원도 원주시 연세대길1 학관 313호</p>
+	<p>강원도 원주시 연세대길1 학관 4층</p>
 </div>
 </body>
 </html>

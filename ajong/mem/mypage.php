@@ -91,6 +91,8 @@ if(!isset($_SESSION['user_session'])){
 </div>
 
 </div>
-
+<div id="footer">
+	<p>강원도 원주시 연세대길1 학관 4층</p>
+</div>
 </body>
 </html>

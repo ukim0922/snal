@@ -171,7 +171,7 @@ $number = $total_record - $start;
 	</div>
 </div>
 <div id="footer">
-	<p>강원도 원주시 연세대길1 학관 313호</p>
+	<p>강원도 원주시 연세대길1 학관 4층</p>
 </div>
 </body>
 </html>
