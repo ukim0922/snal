@@ -67,9 +67,10 @@ if(isset($_SESSION['user_session'])){
 }else{
 	$userid = "";
 }
-	if($userid=="admin")// || $userlevel==1 )
+if($userid==$item_id || $userid=="admin")
 	{
 ?>
+				<?=$userid, $item_id?>
 				<a href="../community/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
 <?php

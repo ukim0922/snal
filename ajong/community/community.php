@@ -4,7 +4,7 @@ if(isset($_SESSION['$current_page']))
 {
 	unset($_SESSION['$current_page']);
 }
-$_SESSION['$current_page'] = 2;
+$_SESSION['$current_page'] = 5;
 $table = "community";
 
 $scale = 10;
