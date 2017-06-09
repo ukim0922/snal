@@ -20,81 +20,82 @@
 			switch($_SESSION['$current_page']){
 				case 1:
 					?>
-					<li class="current_page_item"><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li class="current_page_item"><a href="../common/index.php">About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li><a href="../calendar/calendar.php">Calendar</a></li>
+					<li><a href="../space/space.php"  >Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				case 2:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li class="current_page_item"><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php">About us</a></li>
+					<li class="current_page_item"><a href="../notice/notice.php">Notice</a></li>
+					<li><a href="../calendar/calendar.php">Calendar</a></li>
+					<li><a href="../space/space.php"  >Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				case 3:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li class="current_page_item"><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php">About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li class="current_page_item"><a href="../calendar/calendar.php">Calendar</a></li>
+					<li><a href="../space/space.php"  >Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				case 4:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li class="current_page_item"><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php">About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li><a href="../calendar/calendar.php">Calendar</a></li>
+					<li class="current_page_item"><a href="../space/space.php">Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				case 5:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li class="current_page_item"><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php">About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li><a href="../calendar/calendar.php">Calendar</a></li>
+					<li><a href="../space/space.php">Space</a></li>
+					<li class="current_page_item"><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				case 6:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li class="current_page_item"><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php" >About us</a></li>
+					<li><a href="../notice/notice.php">Notice</a></li>
+					<li><a href="../calendar/calendar.php">Calendar</a></li>
+					<li><a href="../space/space.php">Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li class="current_page_item"><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 					break;
 				default:
 					?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
+					<li><a href="../common/index.php"  >About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li><a href="../calendar/calendar.php" >Calendar</a></li>
+					<li><a href="../space/space.php">Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 			}
 			}else {
 			?>
-					<li><a href="../common/index.php" accesskey="1" title="">About us</a></li>
-					<li><a href="../notice/notice.php" accesskey="1" title="">Notice</a></li>
-					<li><a href="../calendar/calendar.php" accesskey="2" title="">Calendar</a></li>
-					<li><a href="../space/space.php" accesskey="3" title="">Space</a></li>
-					<li><a href="../community/community.php" accesskey="4" title="">Community</a></li>
-					<li><a href="../gallery/gallery.php" accesskey="4" title="">Gallery</a></li>
+					<li><a href="../common/index.php"  >About us</a></li>
+					<li><a href="../notice/notice.php" >Notice</a></li>
+					<li><a href="../calendar/calendar.php" >Calendar</a></li>
+					<li><a href="../space/space.php">Space</a></li>
+					<li><a href="../community/community.php">Community</a></li>
+					<li><a href="../gallery/gallery.php">Gallery</a></li>
 					<?php
 			}
 			?>

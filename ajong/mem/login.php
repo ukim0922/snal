@@ -29,7 +29,7 @@ if(isset($_POST['btn-login']))
 	}
 }
 ?>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,11 +39,10 @@ if(isset($_POST['btn-login']))
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	
-	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../fonts/fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	
-
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -74,17 +73,18 @@ if(isset($_POST['btn-login']))
             <div class="form-group">
              <input type="password" class="form-control" name="txt_password" placeholder="비밀번호" required />
             </div>
-            <div class="clearfix"></div><hr />
+            
             <div class="form-group">
              <button type="submit" name="btn-login" class="button">
                  <i class="glyphicon glyphicon-log-in"></i>&nbsp;로그인
                 </button>
             </div>
-            <br />
             <label> 스날 회원이라면?! <a href="register.php"> 회원가입</a></label>
         </form>
        </div>
+       </div>
 </div>
+
 <div id="footer">
 	<p>강원도 원주시 연세대길1 학관 4층</p>
 </div>
