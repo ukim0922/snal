@@ -10,9 +10,40 @@ $row = $result->fetch();
 // 하나의 레코드 가져오기
 
 $item_num     = $row['num'];
+$item_id     = $row['id'];
 $item_date    = $row['regist_day'];
 $item_title = str_replace(" ", "&nbsp;", $row['title']);
 $item_content = $row['content'];
+
+$image_name[0]   = $row['file_name_0'];
+$image_name[1]   = $row['file_name_1'];
+$image_name[2]   = $row['file_name_2'];
+
+
+$image_copied[0] = $row['file_copied_0'];
+$image_copied[1] = $row['file_copied_1'];
+$image_copied[2] = $row['file_copied_2'];
+
+for ($i=0; $i<3; $i++)
+{
+	if ($image_copied[$i])
+	{
+		$imageinfo = GetImageSize("./data/".$image_copied[$i]);
+		
+		$image_width[$i] = $imageinfo[0];
+		$image_height[$i] = $imageinfo[1];
+		$image_type[$i]  = $imageinfo[2];
+		
+		if ($image_width[$i] > 785)
+			$image_width[$i] = 785;
+	}
+	else
+	{
+		$image_width[$i] = "";
+		$image_height[$i] = "";
+		$image_type[$i]  = "";
+	}
+}
 
 $pdo->query($sql);
 ?>
@@ -44,32 +75,50 @@ $pdo->query($sql);
 	<div id="portfolio-wrapper">
 		<div id="page" class="container">
         <div class="title">
-					<h2><strong>NOTICE</strong></h2> 
+					<h2><strong>gallery</strong></h2> 
 		</div>		
 		<div id="view_comment"> &nbsp;</div>
-
+		<?php 
+		$res = $pdo->query("SELECT * FROM personal_info where id = '$item_id'");
+		$rlt = $res->fetch();
+		$item_name = $rlt['name'];
+		?>
 		<div id="view_title">
 			<div id="view_title1"><strong><?= $item_title ?></strong></div>
-			<div id="view_title2">등록일 : <?= $item_date ?></div>	
+			<div id="view_title2">작성자 : <?= $item_name ?></div>	
+			<div id="view_title3">등록일 : <?= $item_date ?></div>	
 		</div>
 
 		<div id="view_content">
+			
+<?php
+	for ($i=0; $i<3; $i++)
+	{
+		if ($image_copied[$i])
+		{
+			$img_name = $image_copied[$i];
+			$img_name = "./data/".$img_name;
+			$img_width = $image_width[$i];
+			
+			echo "<img src='$img_name' width='$img_width'>"."<br><br>";
+		}
+	}
+	$item_content = str_replace("\r\n", "<br/>" , $item_content);?>
 			<?= $item_content ?>
 		</div>
-
 		<div id="view_button">
-				<a href="../notice/notice.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
+				<a href="../gallery/gallery.php?table=<?=$table?>&page=<?=$page?>" class="button">목록</a>&nbsp;
 <?php
 if(isset($_SESSION['user_session'])){
 	$userid = $_SESSION['user_session'];
 }else{
 	$userid = "";
 }
-	if($userid=="admin")// || $userlevel==1 )
+if($userid==$item_id || $userid=="admin")
 	{
 ?>
-				<a href="../notice/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
-				<a href="javascript:del('../notice/delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
+				<a href="../gallery/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
+				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
 <?php
 	}
 ?>

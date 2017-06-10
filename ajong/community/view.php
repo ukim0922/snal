@@ -18,13 +18,13 @@ $item_content = $row['content'];
 $pdo->query($sql);
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" /><!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
@@ -48,15 +48,20 @@ $pdo->query($sql);
 					<h2><strong>Community</strong></h2> 
 		</div>		
 		<div id="view_comment"> &nbsp;</div>
-
+		<?php 
+		$res = $pdo->query("SELECT * FROM personal_info where id = '$item_id'");
+		$rlt = $res->fetch();
+		$item_name = $rlt['name'];
+		?>
 		<div id="view_title">
 			<div id="view_title1"><strong><?= $item_title ?></strong></div>
-			<div id="view_title2">작성자 : <?= $item_id ?></div>	
+			<div id="view_title2">작성자 : <?= $item_name ?></div>	
 			<div id="view_title3">등록일 : <?= $item_date ?></div>	
 		</div>
 
 		<div id="view_content">
-			<?= $item_content ?>
+			<?php  $item_content = str_replace("\r\n", "<br/>" , $item_content);?>
+			<?=$item_content ?>
 		</div>
 
 		<div id="view_button">
@@ -70,7 +75,6 @@ if(isset($_SESSION['user_session'])){
 if($userid==$item_id || $userid=="admin")
 	{
 ?>
-				<?=$userid, $item_id?>
 				<a href="../community/write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>" class="button">수정</a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')" class="button">삭제</a>&nbsp;
 <?php

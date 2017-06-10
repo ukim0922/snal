@@ -63,13 +63,14 @@ if(!isset($_GET['page']) || !($_GET['page'])) {
 $start = ($page - 1) * $scale;
 $number = $total_record - $start;
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
@@ -105,10 +106,10 @@ $number = $total_record - $start;
 					<table class="type09" style="vertical-align:center; " >
 					    <thead>
 					    <tr>
-      					  <th scope="cols">글번호</th>
- 					      <th scope="cols">제목</th>
- 					      <th scope="cols">작성자</th>
- 					      <th scope="cols">등록일</th>
+      					  <th scope="cols" align="center">글번호</th>
+ 					      <th scope="cols" align="center">제목</th>
+ 					      <th scope="cols" align="center">작성자</th>
+ 					      <th scope="cols" align="center">등록일</th>
  						</tr>
 					    </thead>
 				
@@ -119,6 +120,9 @@ $number = $total_record - $start;
 				//$result->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_ABS, $i);
 				$item_num     = $row['num'];
 				$item_id     = $row['id'];
+				$res = $pdo->query("SELECT * FROM personal_info where id = '$item_id'");
+				$rlt = $res->fetch();
+				$item_name = $rlt['name']; 
 		      	$item_date    = $row['regist_day'];
 			  	$item_date = substr($item_date, 0, 10);  
 			  	$item_title= str_replace(" ", "&nbsp;", $row['title']);
@@ -128,7 +132,7 @@ $number = $total_record - $start;
    							<tr>
    								<th style="width:10%;" align="center" scope="row"><?=$number?></th>
         						<td style="width:50%;" align="center"><a href="../community/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
-   								<td style="width:20%;" align="center"><?= $item_id ?></td>
+   								<td style="width:20%;" align="center"><?= $item_name ?></td>
         						<td style="width:20%;" align="center"><?= $item_date ?></td>
 					        </tr>
 					    </tbody>
