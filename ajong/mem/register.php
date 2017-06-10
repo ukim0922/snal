@@ -32,7 +32,13 @@ if(isset($_POST['btn-signup']))
 	$yyyy=$_POST['yyyy'];
 	$mm=$_POST['mm'];
 	$dd=$_POST['dd'];
-	$date = date("Y-m-d", mktime(0, 0, 0, $mm, $dd, $yyyy)); 
+	
+	if($yyyy!=null && $mm!=null && $dd!=null ){
+		$date = date("Y-m-d", mktime(0, 0, 0, $mm, $dd, $yyyy)); 
+	}
+	else{
+		$date = null;
+	}
 	
 	$uphone = preg_replace("/[^0-9]/", "", $uphone);
 
@@ -61,7 +67,7 @@ if(isset($_POST['btn-signup']))
 	else if(strlen($upass) < 8){
 		$error[] = "비밀번호를 8자리 이상 문자로 입력해 주세요";
 	}
-	else if(!checkdate($mm, $dd, $yyyy)){
+	else if(($yyyy!=null && $mm!=null && $dd!=null) && !checkdate($mm, $dd, $yyyy)){
 		$error[] = "생년월일을 확인해 주세요";
 	}
 
