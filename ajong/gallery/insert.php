@@ -16,7 +16,7 @@
 	$files = $_FILES["upfile"];
 	$count = count($files["name"]);
 
-	if( !count ) {		//이미지 파일이 하나도 업로드 되지 않는 경우
+	if( !$count ) {		//이미지 파일이 하나도 업로드 되지 않는 경우
 		echo("
 				<script>
 				alert('이미지를 업로드 해주세요! ');
@@ -142,20 +142,20 @@
 				unlink($delete_path);
 				
 				$sql = "update $table set $field_org_name = '$org_name_value', $field_real_name = '$org_real_value'  where num=$num";
-				mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+				$pdo->query($sql);// $sql 에 저장된 명령 실행
 			}
 			else
 			{
 				if (!$upfile_error[$i])
 				{
 					$sql = "update $table set $field_org_name = '$org_name_value', $field_real_name = '$org_real_value'  where num=$num";
-					mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+					$pdo->query($sql);// $sql 에 저장된 명령 실행
 				}
 			}
 			
 		}
 		
-		$sql = "update $table set id='$uid', title='$utitle', content='$ucontent' where num=$num";
+		$sql = "update $table set id='$uid', title='$utitle', content='$ucontent' file_name_0 where num=$num";
 		$pdo->query($sql);// $sql 에 저장된 명령 실행
 	}
 	else

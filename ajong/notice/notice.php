@@ -125,9 +125,9 @@ $number = $total_record - $start;
 			
    						<tbody>
    							<tr>
-   								<th scope="row" style="width:10%;" align="center" ><?=$number?></th>
-        						<td  style="width:70%;" align="center"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
-        						<td style="width:20%;" align="center"><?= $item_date ?></td>
+   								<th scope="row" align="center" ><?=$number?></th>
+        						<td   align="center"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
+        						<td  align="center"><?= $item_date ?></td>
 					        </tr>
 					    </tbody>
 		<?php $number--; } ?>

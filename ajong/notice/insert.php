@@ -21,6 +21,17 @@
 	$num = $_GET['num'];
 	$utitle= $_POST['title'];
 	$ucontent= $_POST['content'];
+	$yyyy=$_POST['yyyy'];
+	$mm=$_POST['mm'];
+	$dd=$_POST['dd'];
+	if(!($yyyy||$mm||$dd)){
+		$udate = null;
+	}else{
+		$udate = date("Y-m-d", mktime(0, 0, 0, $mm, $dd, $yyyy));
+	}
+	$uplace= $_POST['place'];
+	$ucheck_date= $_POST['check_date'];
+	$ucheck_place= $_POST['check_place'];
 	
 	if ($mode=="modify")
 	{
@@ -28,13 +39,13 @@
 		$result = $pdo->query($sql);
 		$row = $result->fetch();
 
-		$sql = "update $table set title='$utitle', content='$ucontent' where num=$num";
+		$sql = "update $table set title='$utitle', content='$ucontent', date='$udate', place='$uplace', where num=$num";
 		$pdo->query($sql);// $sql 에 저장된 명령 실행
 	}
 	else
 	{
-		$sql = "insert into $table (title, content, regist_day)";
-		$sql .= "values('$utitle', '$ucontent', '$regist_day')";
+		$sql = "insert into $table (title, date, place, content, regist_day)";
+		$sql .= "values('$utitle', '$udate', '$uplace', '$ucontent', '$regist_day')";
 		$pdo->query($sql);// $sql 에 저장된 명령 실행
 	}
 	if($pdo)

@@ -10,7 +10,9 @@ $row = $result->fetch();
 // 하나의 레코드 가져오기
 
 $item_num     = $row['num'];
-$item_date    = $row['regist_day'];
+$item_regist    = $row['regist_day'];
+$item_date    = $row['date'];
+$item_place    = $row['place'];
 $item_title = str_replace(" ", "&nbsp;", $row['title']);
 $item_content = $row['content'];
 
@@ -50,11 +52,25 @@ $pdo->query($sql);
 
 		<div id="view_title">
 			<div id="view_title1"><strong><?= $item_title ?></strong></div>
-			<div id="view_title2">등록일 : <?= $item_date ?></div>	
+			<div id="view_title2">등록일 : <?= $item_regist?></div>	
 		</div>
 
-		<div id="view_content">
-			<?= $item_content ?>
+		<div id="view_content"><?php 
+		if($item_date > 0){
+		?>
+		<strong>일시 : <?= $item_date ?></strong><br>
+		<?php 
+		}
+		?>
+		<?php 
+		if($item_place != null){
+		?>
+		<strong>장소 : <?= $item_place ?></strong><br><br>
+		<?php 
+		}
+		?>
+		<?php  $item_content = str_replace("\r\n", "<br/>" , $item_content);?>
+		<?= $item_content ?>
 		</div>
 
 		<div id="view_button">
