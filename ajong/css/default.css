@@ -170,7 +170,7 @@ hr {
 }
 #header-wrapper
 {
-	background: #0a8897 url(images/overlay.png);
+	background: #0a8897 url(../images/overlay.png);
 	background-size: cover;
 }
 
@@ -682,6 +682,31 @@ table.type09 tbody th {
 table.type09 td {
 	width:30%; /*원래 350px*/
     padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table.cal {
+	border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+	width: 100%;
+}
+table.cal thead th {
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+table.cal tbody th {
+	width:14%; /*원래 150px*/
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.cal td {
+	width:14%; /*원래 350px*/
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
