@@ -30,6 +30,7 @@ if ($mode=="modify")
 	$dd=substr($row['date'], 8,2);
 	
 	$item_title     = $row['title'];
+	$item_place     = $row['place'];
 	$item_content   = $row['content'];
 }
 

@@ -39,7 +39,7 @@
 		$result = $pdo->query($sql);
 		$row = $result->fetch();
 
-		$sql = "update $table set title='$utitle', content='$ucontent', date='$udate', place='$uplace', where num=$num";
+		$sql = "update $table set title='$utitle', date='$udate', place='$uplace', content='$ucontent'  where num=$num";
 		$pdo->query($sql);// $sql 에 저장된 명령 실행
 	}
 	else

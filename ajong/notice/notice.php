@@ -104,11 +104,14 @@ $number = $total_record - $start;
 				<div id="list_top_title">
 					
 					<table class="type09">
+					<colgroup>
+					 <col class="table-cell-1of4" span="2"> <!-- Class를 지정해서 스타일을 입혀줌 -->
+   					</colgroup>
 					    <thead>
 					    <tr>
-      					  <th scope="cols" align="center">글번호</th>
- 					      <th scope="cols" align="center">제목</th>
- 					      <th scope="cols" align="center">등록일</th>
+      					  <th scope="col">글번호</th>
+ 					      <th scope="col">제목</th>
+ 					      <th scope="col">등록일</th>
  						</tr>
 					    </thead>
 				
@@ -125,9 +128,9 @@ $number = $total_record - $start;
 			
    						<tbody>
    							<tr>
-   								<th scope="row" align="center" ><?=$number?></th>
-        						<td   align="center"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
-        						<td  align="center"><?= $item_date ?></td>
+   								<th scope="row"><?=$number?></th>
+        						<td scope="row"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
+        						<td scope="row"><?= $item_date ?></td>
 					        </tr>
 					    </tbody>
 		<?php $number--; } ?>
