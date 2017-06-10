@@ -63,13 +63,14 @@ if(!isset($_GET['page']) || !($_GET['page'])) {
 $start = ($page - 1) * $scale;
 $number = $total_record - $start;
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
@@ -105,9 +106,9 @@ $number = $total_record - $start;
 					<table class="type09">
 					    <thead>
 					    <tr>
-      					  <th scope="cols">글번호</th>
- 					      <th scope="cols">제목</th>
- 					      <th scope="cols">등록일</th>
+      					  <th scope="cols" align="center">글번호</th>
+ 					      <th scope="cols" align="center">제목</th>
+ 					      <th scope="cols" align="center">등록일</th>
  						</tr>
 					    </thead>
 				
@@ -124,9 +125,9 @@ $number = $total_record - $start;
 			
    						<tbody>
    							<tr>
-   								<th scope="row" id="list_item1"><?=$number?></th>
-        						<td id="list_item2"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
-        						<td id="list_item4"><?= $item_date ?></td>
+   								<th scope="row" style="width:10%;" align="center" ><?=$number?></th>
+        						<td  style="width:70%;" align="center"><a href="../notice/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_title?></a></td>
+        						<td style="width:20%;" align="center"><?= $item_date ?></td>
 					        </tr>
 					    </tbody>
 		<?php $number--; } ?>
