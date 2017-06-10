@@ -48,25 +48,6 @@ function sel_mm($mm, $func) {
 	return $str;
 }
 
-function get_schedule($tdate) {
-	
-	
-	
-	/*$mm = str_pad($mm, 2, "0", STR_PAD_LEFT);
-	$dd = str_pad($dd, 2, "0", STR_PAD_LEFT);
-	$dtstr = $yy."-".$mm."-".$dd;
-	$sql = "SELECT *
-	FROM schedule
-	WHERE frdt <= '$dtstr'
-	AND todt >= '$dtstr'
-	ORDER BY frdt, todt";
-	$ret = dbquery($sql) or die(mysql_error());
-	while($row = dbfetch($ret)) {
-		$str .= "<font style='font-size:8pt;'>- $row[name]</font><br>";
-	}
-	return $str;*/
-}
-
 
 // 1. 총일수 구하기
 $last_day = date("t", strtotime($yy."-".$mm."-01"));
@@ -182,7 +163,6 @@ for($i=1; $i <= $total_week; $i++){?>
 				$result_array = $result->fetchAll();
 				for ($k=0; $k<$total_record; $k++){
 					$row= $result_array[$k];
-					//$result->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_ABS, $i);
 					$num = $row['num'];
 					$item_title     = $row['title'];
 					$item_place    = $row['place'];
@@ -206,22 +186,15 @@ for($i=1; $i <= $total_week; $i++){?>
 			try{
 				$tmp_day=substr($tdate, 5,5);
 				$res = $pdo->query("SELECT COUNT(*) FROM personal_info where date_of_birth like '%$tmp_day'");
-				$total_record= $res->fetchColumn();// 전체 글 개수
-				//$item_name= $row['name'];
-				//$item_position = $row['position'];
+				$total_record= $res->fetchColumn();// 전체 회원 수 
 				$result = $pdo->query("select * from personal_info where date_of_birth like '%$tmp_day'");
 				
 				$result_array = $result->fetchAll();
 				for ($k=0; $k<$total_record; $k++){
-					$row= $result_array[$k];
-					//$result->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_ABS, $i);
-					//$birth = $row['date_of_birth'];
-					
+					$row= $result_array[$k];					
 					
 					$birth_mm=substr($row['date_of_birth'], 5,2);
 					$birth_dd=substr($row['date_of_birth'], 8,2);
-					echo $mm;
-					echo $day;
 					if($mm==$birth_mm && $day==$birth_dd){
 					?>
 						<li ><?=$row['name']?> <?=$row['position']?>의 생일을 축하합니다!</li>
@@ -235,7 +208,7 @@ for($i=1; $i <= $total_week; $i++){?>
 			}
 			
 		}
-		// 14. 날자 증가
+		// 14. 날짜증가
 		$day++;
 	}
 	?>
