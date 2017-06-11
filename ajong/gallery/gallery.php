@@ -102,10 +102,11 @@ $number = $total_record - $start;
 				</form>
 				<div class="clear"></div>
 				<br>
+				
 				<div id="list_top_title">
 				<tr>
 				<td valign="top" align="center">
-				<table width="925" border="0" cellspacing="0" cellpadding="0">										
+				<table border="0" cellspacing="0" cellpadding="0">										
 													<tr> 
 														<td colspan="9" height="3" bgcolor="#036"></td>
 													</tr> 
@@ -113,13 +114,13 @@ $number = $total_record - $start;
 														<td colspan="9" height="10"></td>
 													</tr> 
 													<tr>
-														<td width="300" height="1"></td>
-														<td width="30"></td>
-														<td width="300"></td>
-														<td width="30"></td>
-														<td width="300"></td>
-														<td width="30"></td>
-														<td width="300"></td>
+														<td width="24%" height="1"></td>
+														<td width="1%"></td>
+														<td width="24%"></td>
+														<td width="1%"></td>
+														<td width="24%"></td>
+														<td width="1%"></td>
+														<td width="24%"></td>
 													</tr>
 				
 						<?php	
@@ -136,14 +137,14 @@ $number = $total_record - $start;
 								  	$rlt = $res->fetch();
 								  	$item_name = $rlt['name']; 
 							?>
-														<td width="300">
-															<table width="300" height="142" border="0" cellspacing="0" cellpadding="0" background="/images/sub/box_bg.jpg">
+														<td width="24%">
+															<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" background="/images/sub/box_bg.jpg">
 																<tr>
 																	<td align="center">
 																		<a href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>" onFocus="this.blur();">
-																		<table width="215" height="142" border="0" cellspacing="0" cellpadding="0">
+																		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
 																			<tr>
-																				<td align="center" height="200" style="background-image:url(../gallery/data/<?=$item_image?>);background-size:250px;background-repeat:repeat-x;background-position: center center;"></td>
+																				<td align="center" height="300" style="background-image:url(../gallery/data/<?=$item_image?>);background-size:100%;background-repeat:repeat-x;background-position: center center;"></td>
 																			</tr>
 																		</table>
 																		</a>
@@ -151,14 +152,14 @@ $number = $total_record - $start;
 																</tr>
 															</table>
 
-															<table width="300" border="0" cellspacing="0" cellpadding="0">
+															<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
 																<tr>
 																	<td align="center" height="5"></td>
 																</tr>
 																<tr>
 																	<td valign="top" align="center" height="120">
 																		<a href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>" onFocus="this.blur();">
-																		<table width="210" height="115" border="0" cellspacing="0" cellpadding="0">
+																		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
 																			<tr>
 																				<td height="30" class="mtit_12_b"><?= $item_title?>&nbsp;</td>
 																			</tr>
@@ -183,7 +184,8 @@ $number = $total_record - $start;
 														<td width="30"></td>
 		
 														<?php $number--; } ?>
-				</table></td></tr>				
+				</table></td></tr>		
+						
 					<div id="page_button">
 						<div id="page_num"> ◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp; 
 		<?php
