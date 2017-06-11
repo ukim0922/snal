@@ -52,12 +52,12 @@ a img {
 /* view.php css */
 
 	#view_comment {
-		margin:10px 0 0 10px;
+		margin:10px 0 0 3%;
 	}
 	
 	#view_title {
 		height:18px;
-		padding:10px 8px 8px 8px;  
+		padding:10px 3% 8px 3%;  
 		border-bottom: 2px solid #036;
 		margin-bottom:5px;
 	}
@@ -119,7 +119,7 @@ a img {
 	.image-left
 	{
 		float: left;
-		margin: 0 2em 2em 0;
+		margin: 0 2% 2em 0;
 	}
 	
 	.image-centered
@@ -147,7 +147,7 @@ hr {
 }
 
 .container {
-	width: 1200px;
+	width: 100%;
 	margin: 0px auto;
 }
 
@@ -170,7 +170,7 @@ hr {
 }
 #header-wrapper
 {
-	background: #0a8897 url(../images/overlay.png);
+	background: #0a8897 url(images/overlay.png);
 	background-size: cover;
 }
 
@@ -235,7 +235,7 @@ hr {
 
 #menu ul {
 	margin: 0px 0px 0px 0px;
-	padding: 0px 0px;
+	padding: 0px 0%;
 	list-style: none;
 	line-height: normal;
 	text-align: center;
@@ -248,7 +248,7 @@ hr {
 #menu a {
 	display: block;
 	padding: 0px 40px 0px 40px;
-	line-height: 70px;
+	line-height: 40px;
 	letter-spacing: 2px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -275,7 +275,7 @@ hr {
 
 #page {
 	overflow: hidden;
-	padding: 3em 0em 5em 0em;
+	padding: 3em 0% 5em 0%;
 }
 
 	#page img
@@ -304,7 +304,7 @@ hr {
 	
 #page .column1
 {
-	width: 582px;
+	width: 60%;
 }
 
 #page .button
@@ -316,8 +316,8 @@ hr {
 
 #content {
 	float: left;
-	width: 800px;
-	padding-right: 50px;
+	width: 80%;
+	padding-right: 20%;
 	border-right: 1px solid #E6E7DC;
 }
 
@@ -344,8 +344,8 @@ hr {
 
 #sidebar1 {
 	float: right;
-	width: 250px;
-	margin-right: 50px;
+	width: 25%;
+	margin-right: 20%;
 }
 
 #sidebar1 #box1 {
@@ -363,7 +363,7 @@ hr {
 
 #sidebar2 {
 	float: right;
-	width: 250px;
+	width: 25%;
 }
 
 /* Footer */
@@ -371,7 +371,7 @@ hr {
 #footer {
 	overflow: hidden;
 	background: #202020;
-	padding: 5em 0px 10em 0px;
+	padding: 5em 0% 10em 0%;
 }
 
 #footer p {
@@ -392,7 +392,7 @@ ul.style1 {
 }
 
 ul.style1 li {
-	padding: 10px 0px 15px 0px;
+	padding: 10px 0% 15px 0%;
 	border-top: 1px solid #E6E7DC;
 }
 
@@ -410,7 +410,7 @@ ul.style2 {
 }
 
 ul.style2 li {
-	padding: 25px 0px 15px 0px;
+	padding: 25px 0% 15px 0%;
 	border-top: 1px solid #E6E7DC;
 }
 
@@ -420,7 +420,7 @@ ul.style2 .first {
 }
 
 ul.style2 h3 {
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0% 10px 0%;
 	font-size: 1.10em;
 }
 
@@ -446,7 +446,7 @@ ul.style3 {
 }
 
 ul.style3 li {
-	padding: 20px 0px 20px 0px;
+	padding: 20px 0% 20px 0%;
 	border-top: 1px solid #E6E7DC;
 }
 
@@ -458,11 +458,11 @@ ul.style3 p {
 ul.style3 img {
 	float: left;
 	margin-top: 3px;
-	margin-right: 20px;
+	margin-right: 5%;
 }
 
 ul.style3 .posted {
-	padding: 10px 0px 10px 0px;
+	padding: 10px 0% 10px 0%;
 	font-size: 8pt;
 	color: #A2A2A2;
 }
@@ -475,7 +475,7 @@ ul.style3 .first {
 .link-style {
 	display: inline-block;
 	margin-top: 20px;
-	padding: 7px 20px;
+	padding: 7px 5%;
 	background: #0C73D4;
 	border-radius: 5px;
 	text-decoration: none;
@@ -491,7 +491,7 @@ ul.style3 .first {
 	#portfolio-wrapper
 	{
 		overflow: hidden;
-		padding: 0em 0em;
+		padding: 0em 0%;
 		background: rgba(0,0,0,.02);
 		background-image: url(images/overlay.png);
 		background-repeat: repeat;
@@ -548,7 +548,7 @@ ul.style3 .first {
 	.column3
 
 	{
-		width: 282px;
+		width: 28%;
 	}
 	
 	.column1
@@ -602,7 +602,7 @@ ul.style3 .first {
 	{
 		display: inline-block;
 		margin-top: 2em;
-		padding: 0em 1em;
+		padding: 0em 1%;
 		background: #0a8897;
 		border-radius: 8px;
 		letter-spacing: 0.10em;
@@ -621,14 +621,14 @@ ul.style3 .first {
 	ul.contact
 	{
 		margin: 0;
-		padding: 2em 0em 0em 0em;
+		padding: 2em 0% 0em 0%;
 		list-style: none;
 	}
 	
 	ul.contact li
 	{
 		display: inline-block;
-		padding: 0em 0.10em;
+		padding: 0em 0.05%;
 		font-size: 1em;
 	}
 	
@@ -647,7 +647,7 @@ ul.style3 .first {
 	{
 		display: inline-block;
 		background: none;
-		width: 40px;
+		width: 4%;
 		height: 40px;
 		line-height: 40px;
 		text-align: center;
@@ -658,6 +658,7 @@ ul.style3 .first {
 /*********************************************************************************/
 /* Table                                                      				     */
 /*********************************************************************************/	
+
 table.type09 {
     border-collapse: collapse;
     text-align: left;
@@ -665,54 +666,54 @@ table.type09 {
 	width: 100%;
 }
 table.type09 thead th {
-    padding: 10px;
+	/*원래 150px*/
+	align: center; 
+    padding: 1%;
     font-weight: bold;
     vertical-align: top;
     color: #369;
     border-bottom: 3px solid #036;
 }
 table.type09 tbody th {
-	width:10%; /*원래 150px*/
-    padding: 10px;
+	align:center;
+	 /*원래 150px*/
+    padding: 1%;
     font-weight: bold;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
     background: #f3f6f7;
 }
 table.type09 td {
-	width:30%; /*원래 350px*/
-    padding: 10px;
+	align:center;
+	 /*원래 350px*/
+    padding: 1%;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+.table-cell {
+    @for $i from 1 through 10 {
+        &-1of#{$i} {
+          width: percentage(1/$i);
+        }
+    }
 
-table.cal {
+    &-3of5 { width: 60%; }
+    &-2of3 { width: 66.66%; }
+    &-3of4 { width: 75%; }
+    &-4of5 { width: 80%; }
+    &-5of6 { width: 83.33%; }
+}
+
+table.type01{
 	border-collapse: collapse;
     text-align: left;
     line-height: 1.5;
 	width: 100%;
 }
-table.cal thead th {
-    font-weight: bold;
-    vertical-align: top;
-    color: #369;
-    border-bottom: 3px solid #036;
-}
-table.cal tbody th {
-	width:14%; /*원래 150px*/
-    font-weight: bold;
+table.type01 td.pic_padding{
+	width: 20%;
+	align:center;
+    padding: 1%;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
-    background: #f3f6f7;
-}
-table.cal td {
-	width:14%; /*원래 350px*/
-    vertical-align: top;
-    border-bottom: 1px solid #ccc;
-}
-
-.list_item2{
-	float:left;
-	width:50%;
-	align: center;
 }
