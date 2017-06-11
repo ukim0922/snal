@@ -5,7 +5,7 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #F8F8F8 url(images/overlay.png) repeat;
+	background: #F8F8F8 url(../images/overlay.png) repeat;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 12pt;
 	font-weight: 400;
@@ -39,6 +39,10 @@ strong {
 
 a {
 	color: rgba(0,0,0,.8);
+}
+
+#top{
+	padding-right:10px;
 }
 
 a:hover {
@@ -191,6 +195,7 @@ hr {
 
 #logo {
 	position: absolute;
+	padding: 10px;
 	top: 3em;
 	left: 0;
 }
@@ -275,7 +280,7 @@ hr {
 
 #page {
 	overflow: hidden;
-	padding: 3em 0% 5em 0%;
+	padding: 3em 10px 5em 10px;
 }
 
 	#page img
@@ -409,10 +414,7 @@ ul.style2 {
 	list-style: none;
 }
 
-ul.style2 li {
-	padding: 25px 0% 15px 0%;
-	border-top: 1px solid #E6E7DC;
-}
+
 
 ul.style2 .first {
 	padding-top: 0px;
@@ -493,7 +495,7 @@ ul.style3 .first {
 		overflow: hidden;
 		padding: 0em 0%;
 		background: rgba(0,0,0,.02);
-		background-image: url(images/overlay.png);
+		background-image: url(../images/overlay.png);
 		background-repeat: repeat;
 		border-top: 1px solid rgba(0,0,0,.05);
 	}
@@ -628,7 +630,7 @@ ul.style3 .first {
 	ul.contact li
 	{
 		display: inline-block;
-		padding: 0em 0.05%;
+		padding-right: 10px;
 		font-size: 1em;
 	}
 	
@@ -690,6 +692,31 @@ table.type09 td {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+table.cal {
+ 	border-collapse: collapse;
+     text-align: left;
+     line-height: 1.5;
+ 	width: 100%;
+ }
+ table.cal thead th {
+     font-weight: bold;
+     vertical-align: top;
+     color: #369;
+     border-bottom: 3px solid #036;
+ }
+ table.cal tbody th {
+ 	width:14%; /*원래 150px*/
+     font-weight: bold;
+     vertical-align: top;
+     border-bottom: 1px solid #ccc;
+     background: #f3f6f7;
+ }
+ table.cal td {
+ 	width:14%; /*원래 350px*/
+     vertical-align: top;
+     border-bottom: 1px solid #ccc;
+ }
+ 
 .table-cell {
     @for $i from 1 through 10 {
         &-1of#{$i} {
