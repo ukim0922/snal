@@ -126,7 +126,7 @@ $number = $total_record - $start;
 								  	$item_name = $rlt['name']; 
 							?>
 															<div class="gallery" style="width:300px; float:left; margin:20px;" >
-															  <a target="_blank" href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>">
+															  <a href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>">
 															    <img src="../gallery/data/<?=$item_image?>" >
 															  </a>
 															  <div class="desc"><?= $item_title?></div>
