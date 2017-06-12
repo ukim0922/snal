@@ -27,10 +27,20 @@ $_SESSION['$current_page'] = 1;
 <?php include "../common/menu.php"; ?>
 
 	<div id="page" class="container">
-		<div><a href="#" class="image image-full"><img src="../images/snal2.png" alt=""></img></a></div>
+		<div><a href="#" class="image image-full">
+		
+		
+			<img src=<?php
+				$Image = array("2017_06_10_12_44_34_0.jpg","2017_06_10_12_31_19_0.jpg","2017_06_10_14_20_30_0.jpg","2017_06_10_14_20_49_0.jpg","snal2.PNG");
+				$Random = time()%count($Image);
+				echo "../gallery/data/$Image[$Random]";
+				?>></img>
+		
+		
+		</a></div>
 			<div class="title">
 				<h2><strong>SNAL</strong> : Yonsei University Badminton Club</h2>
-				<span class="byline">쉽게 접할 수 있고, 남녀노소 즐길 수 있는 배드민턴! 연세대학교 동아리 스날 웹페이지에 오신것을 환영합니다.</span>
+				<span class="byline">쉽게 접할 수 있고,<br> 남녀노소 즐길 수 있는 배드민턴!<br> 연세대학교 배드민턴 동아리<br> 스날 웹페이지에 오신것을 환영합니다.</span>
 			</div>
 	</div>
 	<div id="portfolio-wrapper">
@@ -38,7 +48,10 @@ $_SESSION['$current_page'] = 1;
 			<div class="title">
 				<h2>CONTACT US</h2>
 				<span class="byline">welcome to badminton world</span> 
+			
 			<img src="../images/snal_logo.jpg" alt="" ></img>
+			
+			
 			</div>
 				<div class="box">
 					<h3>가입 문의</h3>

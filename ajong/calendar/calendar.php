@@ -28,9 +28,9 @@ function sel_yy($yy, $func) {
 	if($yy == '') $yy = date('Y');
 	
 	if($func=='') {
-		$str = "<select name='yy'>\n<option value=''></option>\n";
+		$str = "<select class='form-control' name='yy'>\n<option value=''></option>\n";
 	} else {
-		$str = "<select name='yy' onChange='$func'>\n<option value=''></option>\n";
+		$str = "<select class='form-control'name='yy' onChange='$func'>\n<option value=''></option>\n";
 	}
 	$gijun = date('Y');
 	for($i=$gijun-5;$i<$gijun+2;$i++) {
@@ -43,13 +43,13 @@ function sel_yy($yy, $func) {
 
 function sel_mm($mm, $func) {
 	if($func=='') {
-		$str = "<select name='mm'>\n";
+		$str = "<select class='form-control input-sm' name='mm'>\n";
 	} else {
-		$str = "<select name='mm' onChange='$func'>\n";
+		$str = "<select class='form-control input-sm' name='mm' onChange='$func'>\n";
 	}
 	for($i=1;$i<13;$i++) {
-		if($mm == $i) $str .= "<option value='$i' selected>{$i}월</option>";
-		else $str .= "<option value='$i'>{$i}월</option>";
+		if($mm == $i) $str .= "<option value='$i' selected>{$i}</option>";
+		else $str .= "<option value='$i'>{$i}</option>";
 	}
 	$str .= "</select>";
 	return $str;
@@ -74,7 +74,7 @@ $last_week = date('w', strtotime($yy."-".$mm."-".$last_day));
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>SNAL</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
 		
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
@@ -98,10 +98,20 @@ $last_week = date('w', strtotime($yy."-".$mm."-".$last_day));
 					<h2><strong>CALENDAR</strong></h2> 
 			</div>
 <form name="form" method="get">
-<table width="100%" class="cal" cellpadding='0' cellspacing='1'>
-<tr>
-<td height="50" align="center" colspan="7">
-<?php echo sel_yy($yy,'submit();');?>년 <?php echo sel_mm($mm,'submit();');?>월 <input type="submit" value="보기"></td>
+<table width="100%" class="cal" cellpadding='0'  align="center" cellspacing='1'>
+<tr align="center">
+		<td height="50" align="center" colspan="7">
+		<div style="width:50%" class="form-inline" align="center">
+				<span  id="y"  style="width:30%" >
+				<?php echo sel_yy($yy,'submit();');?>
+				<label  for="y" class="label">년</label>
+				</span>
+				<span  id="m"  style="width:30%" >
+				<?php echo sel_mm($mm,'submit();');?>
+				<label  for="m" class="label">월</label>
+				</span>	
+		</div>
+		</td>
 </tr>
 <tr bgcolor="#ccdde2">
 <td  height="30" align="center" ><b>일</b></td>
@@ -206,7 +216,7 @@ for($i=1; $i <= $total_week; $i++){?>
 					$birth_dd=substr($row['date_of_birth'], 8,2);
 					if($mm==$birth_mm && $day==$birth_dd){
 					?>
-						<li ><?=$row['name']?> <?=$row['position']?>의 생일을 축하합니다!</li>
+						<li><a><?=$row['name']?> <?=$row['position']?>의 생일을 축하합니다!</a></li>
 					<?php }
 				}
 				$result->execute();

@@ -56,30 +56,34 @@ a img {
 /* view.php css */
 
 	#view_comment {
-		margin:10px 0 0 3%;
+		margin:10px 0 0 10px;
 	}
 	
 	#view_title {
-		height:18px;
-		padding:10px 3% 8px 3%;  
+		font-size:100%;
+		height:45px;
+		padding:10px 8px 8px 8px;
 		border-bottom: 2px solid #036;
 		margin-bottom:5px;
 	}
-	
+
 	#view_title1 {
+		font-size:100%;
 		float:left;
-		width:60%;
+		width:40%;
 	}
 	
 	#view_title2 {
+		font-size:100%;
 		float:left;
-		width:20%;
+		width:30%;
 		text-align:right;
 	}
 	
 	#view_title3 {
+		font-size:100%;
 		float:left;
-		width:20%;
+		width:30%;
 		text-align:right;
 	}
 	
@@ -93,6 +97,26 @@ a img {
 		margin-bottom:15px;
 	}
 	
+	@media (max-width:30em){
+		#view_title {
+			font-size:70%;
+			height:45px;
+			padding:10px 8px 8px 8px;
+			border-bottom: 2px solid #036;
+			margin-bottom:5px;
+		}
+		
+		#view_content {
+			font-size:70%;
+			width:98%;
+			min-height:200px;
+			padding:15px 0 15px 8px;
+			overflow:hidden;
+			line-height:150%;
+			border-bottom:solid 1px #cccccc;
+			margin-bottom:15px;
+		}
+	}
 	#view_button {
 		width:98%;
 		text-align:right;
@@ -154,6 +178,7 @@ hr {
 	width: 100%;
 	margin: 0px auto;
 }
+.container:after { content:""; clear:both; display:block; }
 
 .iframe{
     width: 100%; 
@@ -283,6 +308,8 @@ hr {
 	padding: 3em 10px 5em 10px;
 }
 
+
+
 	#page img
 	{
 		margin-bottom: 1em;
@@ -290,22 +317,50 @@ hr {
 
 	#page .title
 	{
+		text-align:center;
 		margin-bottom: 2em;
 	}
 
 	#page .title h2
 	{
-		font-size: 1.5em;
+		text-align:center;
+		font-size: 1em;
 		font-weight: 400;
 		color: rgba(0,0,0,0.8);
 	}
 	
 	#page .title .byline
 	{
+		text-align:center;
 		display: block;
 		padding-bottom: 2em;
 		color: rgba(0,0,0,0.7);
 	}
+	
+	@media (max-width:30em){
+	#page .title
+	{
+		text-align:center;
+		margin-bottom: 2em;
+	}
+
+	#page .title h2
+	{
+		text-align:center;
+		font-size: 1em;
+		font-weight: 400;
+		color: rgba(0,0,0,0.8);
+	}
+	
+	#page .title .byline
+	{
+		text-align:center;
+		font-size:90%;
+		display: block;
+		padding-bottom: 2em;
+		color: rgba(0,0,0,0.7);
+	}
+}
 	
 #page .column1
 {
@@ -535,6 +590,7 @@ ul.style3 .first {
 
 	#portfolio .title h2
 	{
+		font-size: 200%;
 		color: rgba(0,0,0,0.8);
 	}
 	
@@ -692,6 +748,17 @@ table.type09 td {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+@media (max-width:30em){
+	table.type09 {
+		font-size:70%;
+	    border-collapse: collapse;
+	    text-align: left;
+	    line-height: 1.5;
+		width: 100%;
+	}
+}
+
+
 table a{
 	
 	text-decoration: none;
@@ -724,8 +791,24 @@ table.cal {
      border-bottom: 1px solid #ccc;
  }
  table.cal li{
- 	font-size: 70%
+ 	font-size: 100%;
+ 	margin:0;
+ 	padding:0;
  }
+ table.cal li a{
+ 	font-size: 90%;
+ 	margin-left:-20px;
+ }
+ @media (max-width:30em){
+	table.cal li{
+	 	font-size: 70%;
+	}
+	table.cal li a{
+ 		font-size: 90%;
+ 		margin-left: -10px;
+ 	}
+}
+ 
 .table-cell {
     @for $i from 1 through 10 {
         &-1of#{$i} {
@@ -770,11 +853,12 @@ div.gallery:hover {
 }
 
 div.gallery img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 200px;
 }
 
 div.desc {
     padding: 15px;
     text-align: center;
 }
+

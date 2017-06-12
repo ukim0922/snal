@@ -93,8 +93,8 @@ $number = $total_record - $start;
 				<div class="title">
 					<h2><strong>gallery</strong></h2> 
 				</div>
-				<form  name="board_form" method="post" action="../gallery/gallery.php?table=<?=$table?>&mode=search"> 
-				<div id="list_search">
+				<form name="board_form" method="post" action="../gallery/gallery.php?table=<?=$table?>&mode=search"> 
+				<div id="list_search" >
 					<div id="list_search1" class="byline"> 총 <?= $total_record ?> 개의 게시물이 있습니다.</div>
 					<div class="form-group">
 					<div class="col-sm-2" >
@@ -110,7 +110,7 @@ $number = $total_record - $start;
 				</form>
 				<div class="clearfix"></div>
 				<br>
-				<div style="width:100%;" align="center">
+				<div style="width:100%;">
 						<?php	
 							$result_array = $result->fetchAll();
 							for ($i=$start; $i<$start+$scale && $i < $total_record; $i++){
@@ -127,9 +127,10 @@ $number = $total_record - $start;
 							?>
 															<div class="gallery" style="width:300px; float:left; margin:20px;" >
 															  <a target="_blank" href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>">
-															    <img src="../gallery/data/<?=$item_image?>" alt="Fjords" width="300px" height="200px">
+															    <img src="../gallery/data/<?=$item_image?>" >
 															  </a>
 															  <div class="desc"><?= $item_title?></div>
+															  <div class="desc"><?= $item_date?></div>
 															  <div style="height:30px"></div>
 															</div>								
 														<div style="width:30px;"> </div>		

@@ -48,7 +48,7 @@ if(!isset($_SESSION['user_session'])){
 <div class="title">
 		<h2><strong>Member</strong></h2> 
 </div>
-<table class='table table-bordered'>
+<table class="type09">
      <tr>
      <th>id</th>
      <th>name</th>
