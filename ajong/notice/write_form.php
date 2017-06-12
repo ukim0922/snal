@@ -43,7 +43,9 @@ if(isset($_GET['page'])) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="euc-kr">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
@@ -114,20 +116,29 @@ if(isset($_GET['page'])) {
 			<div class="title">
 					<h2><strong>NOTICE 작성 페이지</strong></h2> 
 				</div>
-			<div class="write_line"></div>
-			<div id="write_row1"><div class="col1"> 제목   </div>
-			                     <div class="col2"><input type="text" name="title" value="<?=$item_title?>"></div>
-			</div>
-			<div class="write_line"></div>
-			<div id="write_row2"><div class="col1"> 일시  (<input type="checkbox" name="check_date" value=""> 사용할 경우 체크)</div>
-					<div class="col2"><span class="input-group-addon">
-		            	<?php		            	
+				
+				<div class="form-group">
+				<div class="col-sm-4">
+	            	<label for="title">제목</label>
+	            	<input type="text" class="form-control" id="title" name="title" placeholder="제목" value="<?=$item_title?>">
+	            </div>
+	            </div>
+            	
+            	<div class="clearfix"></div>
+	       
+	            <div class="form-group">
+	            <div class="col-sm-6">
+	            	<label for="date">일시</label>
+	            		( <input type="checkbox" name="check_date" value=""> 사용할 경우 체크 )
+		           		 <div class="input-group" id="date">
+		            	<span class="input-group-addon">
+		            	<?php
 		            	$yearRange = 60;
 		            	// 선택되어질 년도 - 현재년 기준 60년전의 년도가 선택되어집니다.
 		            	$currentYear = date('Y');
 		            	$startYear = ($currentYear-$yearRange);
 		            	?>
-		            	<select name="yyyy" class="form-control input-sm">
+		            	<select name="yyyy" class="form-control input-sm"  >
 		            	<option value="">년</option>
 		            	<?php 
 		            	foreach (range($currentYear, $startYear)as $selected){        		
@@ -150,6 +161,7 @@ if(isset($_GET['page'])) {
 		            	}
 		            	?>
 		            	</select>
+
 		  				</span>
 		  				<span class="input-group-addon">
 	    				<select name="dd" class="form-control input-sm" value="<?php if(isset($error)){echo $dd;}?>">
@@ -164,13 +176,29 @@ if(isset($_GET['page'])) {
 		            	?>
 						</select>
 		  				</span>
+						</div>
+						</div>
 					</div>
-			<div class="write_line"></div>
-			<div id="write_row3"><div class="col1"> 장소  (<input type="checkbox" name="check_place" value=""> 사용할 경우 체크)</div> </div>
-			                     <div class="col2"><input type="text" name="place" value="<?=$item_place?>"></div>
-			<div class="write_line"></div>
-			<div id="write_row4"><div class="col1"> 내용   </div>
-			                     <div class="col2"><textarea rows="15" cols="79" name="content"><?=$item_content?></textarea></div>
+					
+            	<div class="clearfix"></div>
+	       
+				<div class="form-group">
+				 <div class="col-sm-6">
+	            	<label for="place">장소</label>
+	            	( <input type="checkbox" name="check_place" value=""> 사용할 경우 체크 )
+	            	<input type="text" class="form-control" id="place" name="place" placeholder="장소" value="<?=$item_title?>">
+	            </div></div>
+            	<div class="clearfix"></div>
+	       
+	       
+	            <div class="form-group">
+				 <div class="col-sm-12">
+	            	<label for="content">내용</label>
+	            	<div class="input-group">
+	            	<textarea rows="15" cols="79" class="form-control" id="content" name="content" placeholder="내용을 입력하세요."><?=$item_content?></textarea>
+	            </div></div></div>
+	            
+            
 			<div class="clear"></div>
 		</div>
 		<div id="write_button"><a type="submit" href="#" onclick="check_input()" class="button">ok</a>&nbsp;

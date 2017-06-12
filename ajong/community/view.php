@@ -20,8 +20,10 @@ $pdo->query($sql);
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />

@@ -7,13 +7,18 @@ if(isset($_SESSION['$current_page']))
 $_SESSION['$current_page'] = 6;
 $table = "gallery";
 
-$scale = 4;
+$scale = 9;
 $pdo = new PDO('mysql:host=localhost;dbname=sampledb;charset=utf8', 'root', '243146');
 
 if(isset($_GET['mode'])){
 	$mode = $_GET['mode'];
 }else{
 	$mode = "";
+}
+if(!isset($_SESSION['user_session'])){
+	echo "<script>alert(\"로그인 해주세요!\");
+	window.location.href='../mem/login.php';
+	</script>";
 }
 //검색 기능
 if ($mode=="search")
@@ -66,8 +71,10 @@ $number = $total_record - $start;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
@@ -89,40 +96,21 @@ $number = $total_record - $start;
 				<form  name="board_form" method="post" action="../gallery/gallery.php?table=<?=$table?>&mode=search"> 
 				<div id="list_search">
 					<div id="list_search1" class="byline"> 총 <?= $total_record ?> 개의 게시물이 있습니다.</div>
-					<ul.style2 id="list_search3">
-						<select name="find">
-		                    <option value='title'>제목</option>
-		                    <option value='content'>내용</option>
-		                    <option value='name'>이름</option>
-						</select></ul.style2>
-					<ul.style2 id="list_search4"><input type="text" name="search"></ul.style2>
-					<ul.style2 id="list_search5"><input type="image" src="../images/search.png"></ul.style2>
-					
+					<div class="form-group">
+					<div class="col-sm-2" >
+								<select class="form-control" name="find">
+				                    <option value='title'>제목</option>
+				                    <option value='content'>내용</option>
+								</select>
+								</div>
+					        <div class="col-sm-4" ><input type="text" class="form-control" name="search"></div>
+					        <input type="image" src="../images/search.png"></ul.style2>
+					</div>
 				</div>
 				</form>
-				<div class="clear"></div>
+				<div class="clearfix"></div>
 				<br>
-				
-				<div id="list_top_title">
-				<tr>
-				<td valign="top" align="center">
-				<table border="0" cellspacing="0" cellpadding="0">										
-													<tr> 
-														<td colspan="9" height="3" bgcolor="#036"></td>
-													</tr> 
-													<tr> 
-														<td colspan="9" height="10"></td>
-													</tr> 
-													<tr>
-														<td width="24%" height="1"></td>
-														<td width="1%"></td>
-														<td width="24%"></td>
-														<td width="1%"></td>
-														<td width="24%"></td>
-														<td width="1%"></td>
-														<td width="24%"></td>
-													</tr>
-				
+				<div style="width:100%;" align="center">
 						<?php	
 							$result_array = $result->fetchAll();
 							for ($i=$start; $i<$start+$scale && $i < $total_record; $i++){
@@ -137,55 +125,19 @@ $number = $total_record - $start;
 								  	$rlt = $res->fetch();
 								  	$item_name = $rlt['name']; 
 							?>
-														<td width="24%">
-															<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" background="/images/sub/box_bg.jpg">
-																<tr>
-																	<td align="center">
-																		<a href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>" onFocus="this.blur();">
-																		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td align="center" height="300" style="background-image:url(../gallery/data/<?=$item_image?>);background-size:100%;background-repeat:repeat-x;background-position: center center;"></td>
-																			</tr>
-																		</table>
-																		</a>
-																	</td>
-																</tr>
-															</table>
-
-															<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-																<tr>
-																	<td align="center" height="5"></td>
-																</tr>
-																<tr>
-																	<td valign="top" align="center" height="120">
-																		<a href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>" onFocus="this.blur();">
-																		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="30" class="mtit_12_b"><?= $item_title?>&nbsp;</td>
-																			</tr>
-																			<tr>
-																				<td height="30" class="mtit_9"><?= $item_name ?></td>
-																			</tr>
-																			<tr>
-																				<td height="30" class="mtit_9"><?= $item_date ?></td>
-																			</tr>
-																			<tr>
-																				<td height="20" class="mtit_10_b" style="padding-top:3px;"></td>
-																			</tr>
-																			<tr>
-																				<td height="4"></td>
-																			</tr>
-																		</table>
-																		</a>
-																	</td>
-																</tr>
-															</table>								
-														</td>
-														<td width="30"></td>
+															<div class="gallery" style="width:300px; float:left; margin:20px;" >
+															  <a target="_blank" href="../gallery/view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>">
+															    <img src="../gallery/data/<?=$item_image?>" alt="Fjords" width="300px" height="200px">
+															  </a>
+															  <div class="desc"><?= $item_title?></div>
+															  <div style="height:30px"></div>
+															</div>								
+														<div style="width:30px;"> </div>		
 		
 														<?php $number--; } ?>
-				</table></td></tr>		
-						
+				</div>
+				<br>
+            	<div class="clearfix"></div>
 					<div id="page_button">
 						<div id="page_num"> ◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp; 
 		<?php

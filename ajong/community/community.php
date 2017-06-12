@@ -15,6 +15,11 @@ if(isset($_GET['mode'])){
 }else{
 	$mode = "";
 }
+if(!isset($_SESSION['user_session'])){
+	echo "<script>alert(\"로그인 해주세요!\");
+	window.location.href='../mem/login.php';
+	</script>";
+}
 //검색 기능
 if ($mode=="search")
 {
@@ -66,8 +71,10 @@ $number = $total_record - $start;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
@@ -89,14 +96,16 @@ $number = $total_record - $start;
 				<form  name="board_form" method="post" action="../community/community.php?table=<?=$table?>&mode=search"> 
 				<div id="list_search">
 					<div id="list_search1" class="byline"> 총 <?= $total_record ?> 개의 게시물이 있습니다.</div>
-					<ul.style2 id="list_search3">
-						<select name="find">
-		                    <option value='title'>제목</option>
-		                    <option value='content'>내용</option>
-						</select></ul.style2>
-					<ul.style2 id="list_search4"><input type="text" name="search"></ul.style2>
-					<ul.style2 id="list_search5"><input type="image" src="../images/search.png"></ul.style2>
-					
+					<div class="form-group">
+					<div class="col-sm-2" >
+								<select class="form-control" name="find">
+				                    <option value='title'>제목</option>
+				                    <option value='content'>내용</option>
+								</select>
+								</div>
+					        <div class="col-sm-4" ><input type="text" class="form-control" name="search"></div>
+					        <input type="image" src="../images/search.png"></ul.style2>
+					</div>
 				</div>
 				</form>
 				<div class="clear"></div>
@@ -104,14 +113,9 @@ $number = $total_record - $start;
 				<div id="list_top_title">
 					
 					<table class="type09" style="vertical-align:center; " >
-					    <thead>
-					    <tr>
-      					  <th scope="cols" align="center">글번호</th>
- 					      <th scope="cols" align="center">제목</th>
- 					      <th scope="cols" align="center">작성자</th>
- 					      <th scope="cols" align="center">등록일</th>
- 						</tr>
-					    </thead>
+					   <thead>
+					<th colspan="9"></th>
+					</thead>
 				
 		<?php	
 		$result_array = $result->fetchAll();

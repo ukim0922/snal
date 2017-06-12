@@ -51,7 +51,9 @@ if(isset($_GET['page'])) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="euc-kr">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
 <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />

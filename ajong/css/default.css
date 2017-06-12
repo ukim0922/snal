@@ -259,7 +259,7 @@ hr {
 	text-transform: uppercase;
 	text-align: center;
 	font-family: 'Varela Round', sans-serif;
-	font-size: 13px;
+	font-size: 50%;
 	color: rgba(255,255,255,0.5);
 	border: none;
 }
@@ -670,7 +670,7 @@ table.type09 {
 table.type09 thead th {
 	/*원래 150px*/
 	align: center; 
-    padding: 1%;
+    padding: 0.1%;
     font-weight: bold;
     vertical-align: top;
     color: #369;
@@ -692,6 +692,13 @@ table.type09 td {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+table a{
+	
+	text-decoration: none;
+}
+
+
+
 table.cal {
  	border-collapse: collapse;
      text-align: left;
@@ -716,7 +723,9 @@ table.cal {
      vertical-align: top;
      border-bottom: 1px solid #ccc;
  }
- 
+ table.cal li{
+ 	font-size: 70%
+ }
 .table-cell {
     @for $i from 1 through 10 {
         &-1of#{$i} {
@@ -743,4 +752,29 @@ table.type01 td.pic_padding{
     padding: 1%;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
+}
+
+
+
+div.gallery {
+	font-size: 70%;
+	align: center;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
 }

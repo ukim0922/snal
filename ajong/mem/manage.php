@@ -23,6 +23,7 @@ if(!isset($_SESSION['user_session'])){
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>SNAL</title>
 	<link href="../css/bootstrap.min.css" rel="stylesheet"/>
@@ -47,7 +48,7 @@ if(!isset($_SESSION['user_session'])){
 <div class="title">
 		<h2><strong>Member</strong></h2> 
 </div>
-<table class='table table-bordered table-responsive'>
+<table class='table table-bordered'>
      <tr>
      <th>id</th>
      <th>name</th>

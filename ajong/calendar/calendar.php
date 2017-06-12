@@ -8,6 +8,13 @@ $_SESSION['$current_page'] = 3;
 require_once('../common/dbconnect.php');
 
 $pdo = new PDO('mysql:host=localhost;dbname=sampledb;charset=utf8', 'root', '243146');
+
+if(!isset($_SESSION['user_session'])){
+	echo "<script>alert(\"로그인 해주세요!\");
+	window.location.href='../mem/login.php';
+	</script>";
+}
+
 if(isset($_REQUEST['yy']) && $_REQUEST['yy']!=""){
 	$yy = $_REQUEST['yy'];
 }
@@ -64,8 +71,10 @@ $last_week = date('w', strtotime($yy."-".$mm."-".$last_day));
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>SNAL</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 		
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
