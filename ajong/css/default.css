@@ -308,21 +308,20 @@ hr {
 #page {
 	overflow: hidden;
 	padding: 3em 10px 5em 10px;
-	text-align: center;
 }
 
 
 
 	#page img
 	{
-		align:center;
+		text-align:center;
 		margin-bottom: 1em;
 		width:70%;
 	}
 	@media (max-width:30em){
 		#page img
 		{
-			align:center;
+			text-align:center;
 			margin-bottom: 1em;
 			width:100%;
 		}
@@ -854,7 +853,7 @@ table.type01 td.pic_padding{
 
 div.gallery {
 	font-size: 70%;
-	align: center;
+	text-align: center;
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
@@ -866,6 +865,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
+	text-align: center;
     width: 300px;
     height: 200px;
 }

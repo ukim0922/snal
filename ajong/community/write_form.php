@@ -83,14 +83,23 @@ if(isset($_GET['page'])) {
 			<div class="title">
 					<h2><strong>Community 작성 페이지</strong></h2> 
 				</div>
-			<div class="write_line"></div>
-			<div id="write_row1"><div class="col1"> 제목   </div>
-			                     <div class="col2"><input type="text" name="title" value="<?=$item_title?>" ></div>
-			</div>
-			<div class="write_line"></div>
-			<div id="write_row2"><div class="col1"> 내용   </div>
-			                     <div class="col2"><textarea rows="15" cols="79" name="content"><?=$item_content?></textarea></div>
-			                     
+				
+			<div class="form-group">
+				<div class="col-sm-4">
+	            	<label for="title">제목</label>
+	            	<input type="text" class="form-control" id="title" name="title" placeholder="제목" value="<?=$item_title?>">
+	            </div>
+	            </div>
+	            
+			<div class="clearfix"></div>
+	       
+	            <div class="form-group">
+				 <div class="col-sm-12">
+	            	<label for="content">내용</label>
+	            	<div class="input-group">
+	            	<textarea rows="15" cols="79" class="form-control" id="content" name="content" placeholder="내용을 입력하세요."><?=$item_content?></textarea>
+	            </div></div></div>
+	            
 			<div class="write_line"></div>
 			<div class="clear"></div>
 		</div>

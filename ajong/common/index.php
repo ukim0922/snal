@@ -26,8 +26,9 @@ $_SESSION['$current_page'] = 1;
 <div id="wrapper">
 <?php include "../common/menu.php"; ?>
 
-	<div id="page" class="container">
-		<div class="homeimg">
+	<div style="text-align:center;" id="page" class="container">
+		<div  class="homeimg">
+		
 			<img src=<?php
 				$Image = array("2017_06_10_12_44_34_0.jpg","2017_06_10_14_20_30_0.jpg","2017_06_10_14_20_49_0.jpg","snal2.PNG","a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg");
 				$Random = time()%count($Image);
