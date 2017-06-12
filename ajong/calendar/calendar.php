@@ -28,9 +28,9 @@ function sel_yy($yy, $func) {
 	if($yy == '') $yy = date('Y');
 	
 	if($func=='') {
-		$str = "<select class='form-control' name='yy'>\n<option value=''></option>\n";
+		$str = "<select class='form-control' style='width:80px' name='yy'>\n<option value=''></option>\n";
 	} else {
-		$str = "<select class='form-control'name='yy' onChange='$func'>\n<option value=''></option>\n";
+		$str = "<select class='form-control' style='width:80px' name='yy' onChange='$func'>\n<option value=''></option>\n";
 	}
 	$gijun = date('Y');
 	for($i=$gijun-5;$i<$gijun+2;$i++) {
@@ -43,9 +43,9 @@ function sel_yy($yy, $func) {
 
 function sel_mm($mm, $func) {
 	if($func=='') {
-		$str = "<select class='form-control input-sm' name='mm'>\n";
+		$str = "<select class='form-control input-sm' style='width:50px' name='mm'>\n";
 	} else {
-		$str = "<select class='form-control input-sm' name='mm' onChange='$func'>\n";
+		$str = "<select class='form-control input-sm' style='width:50px' name='mm' onChange='$func'>\n";
 	}
 	for($i=1;$i<13;$i++) {
 		if($mm == $i) $str .= "<option value='$i' selected>{$i}</option>";
@@ -101,12 +101,12 @@ $last_week = date('w', strtotime($yy."-".$mm."-".$last_day));
 <table width="100%" class="cal" cellpadding='0'  align="center" cellspacing='1'>
 <tr align="center">
 		<td height="50" align="center" colspan="7">
-		<div style="width:50%" class="form-inline" align="center">
-				<span  id="y"  style="width:30%" >
+		<div style="width:100%" class="form-inline" align="center">
+				<span  id="y"  style="width:50%" >
 				<?php echo sel_yy($yy,'submit();');?>
 				<label  for="y" class="label">년</label>
 				</span>
-				<span  id="m"  style="width:30%" >
+				<span  id="m"  style="width:50%" >
 				<?php echo sel_mm($mm,'submit();');?>
 				<label  for="m" class="label">월</label>
 				</span>	
